@@ -39,10 +39,7 @@ function Middle (){
       
        <>
 
-       <video autoPlay loop muted className="bgvideo">
-              <source src= {city} type = "video/mp4" />
-
-                </video>
+      
           <div className="mid" >
           
             <div className="bg">
