@@ -101,10 +101,10 @@ function Middle (){
     )}else{
       return(
  <>
-  <video autoPlay loop muted className="bgvideo">
+  {/* <video autoPlay loop muted className="bgvideo">
               <source src= {city} type = "video/mp4" />
 
-                </video>
+                </video> */}
           <div className="mid" >
           
             <div className="bg">
