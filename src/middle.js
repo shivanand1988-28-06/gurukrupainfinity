@@ -9,7 +9,7 @@ import ButtonBaseDemo from "./buttonbox";
 import RecipeReviewCard from "./blogscard";
 import { Link } from "react-router-dom";
 import MultipleSelectChipthree from "./serchform";
-import city from "./images/video1.mp4" ;
+
 import { useSelector } from "react-redux";
 import { selectUser } from "./slices/userSlice";
 
