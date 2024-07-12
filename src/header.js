@@ -23,11 +23,11 @@ const logOut = ()=>{
 
 const navigate = useNavigate() ;
 
-routeChange =()=>{
+const routeChange =()=>{
 navigate("/signin") ;
 }
 
-routeChangeOne = ()=>{
+const routeChangeOne = ()=>{
   navigate("/signup")
 }
 
