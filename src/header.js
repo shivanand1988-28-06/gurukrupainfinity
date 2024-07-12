@@ -6,9 +6,17 @@ import { Typography } from "@mui/material";
 import {Button}from "@mui/material";
 import {useSelector} from "react-redux" ;
 import { selectUser } from './slices/userSlice';
-
+import { useDispatch } from "react-redux" ;
+import { logout } from "./slices/userSlice" ;
 function Header (props){
 const newuser = useSelector(selectUser) ;
+const dispatch = useDispatch();
+
+const logOut = ()=>{
+    dispatch(logout()) ;
+    console.log("hi from logout");
+}
+
     const Menu01Icon = (props: React.SVGProps<SVGSVGElement>) => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={36} height={36} color={"#ffffff"} fill={"none"} {...props}>
           <path d="M4 5L20 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -97,8 +105,12 @@ const newuser = useSelector(selectUser) ;
               <div className="twit">
                 <Menu01Icon/>
               </div>
-              <div>
-                <h3>HI {newuser}</h3>
+              <div >
+                <h3 className = "twit" >HI {newuser}</h3>
+               
+              </div>
+              <div className="twitlogout">
+              <Button onClick={logOut}>Log out</Button>
               </div>
               </div>
     )}
