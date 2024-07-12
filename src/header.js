@@ -8,6 +8,7 @@ import {useSelector} from "react-redux" ;
 import { selectUser } from './slices/userSlice';
 import { useDispatch } from "react-redux" ;
 import { logout } from "./slices/userSlice" ;
+import {useHistory} from "react-router-dom" ;
 function Header (props){
 const newuser = useSelector(selectUser) ;
 const dispatch = useDispatch();
@@ -16,6 +17,20 @@ const logOut = ()=>{
     dispatch(logout()) ;
     console.log("hi from logout");
 }
+routeChange =()=>{
+let path = `/signin` ;
+let history = useHistory() ;
+history.push(path);
+
+}
+
+routeChangeOne = ()=>{
+  let path = `/signup` ;
+  let history = useHistory() ;
+  history.push(path)
+}
+
+
 
     const Menu01Icon = (props: React.SVGProps<SVGSVGElement>) => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={36} height={36} color={"#ffffff"} fill={"none"} {...props}>
@@ -68,14 +83,14 @@ const logOut = ()=>{
 
              
               <div>
-              <Button onClick ={ event =>window.location.href = "/signin"} >Signin</Button>
+              <Button onClick ={routeChange} >Signin</Button>
                             </div>
                           <div>
                             <span>OR</span>
                             </div>  
               
               <div>
-              <Button onClick ={ event =>window.location.href = "/signup"} >Signup</Button>
+              <Button onClick ={ routeChangeOne} >Signup</Button>
                             </div>
 
              
