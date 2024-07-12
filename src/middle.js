@@ -12,15 +12,18 @@ import MultipleSelectChipthree from "./serchform";
 
 import { useSelector } from "react-redux";
 import { selectUser } from "./slices/userSlice";
-
+import {useNavigate} from "react-router-dom" ;
 
 function Middle (){
 
   const username = useSelector(selectUser) ;
      console.log(username) ;
+  const navigate = useNavigate() ;
 
-     function onClick (event){
-        event.window.location.href = "/officeproperties"
+     function postNavigate (event){
+
+       navigate("/postproperty");
+
      }
 
   const theme = createTheme({
@@ -52,7 +55,7 @@ function Middle (){
              
           <ThemeProvider theme={theme}>
 
-             <Button  onClick ={event =>window.location.href = "/signup"} variant="contained"  endIcon={<SendIcon /> }>
+             <Button  onClick ={postNavigate} variant="contained"  endIcon={<SendIcon /> }>
                  Post Property Now
                </Button>
                </ThemeProvider>
