@@ -9,7 +9,7 @@ import { selectUser } from './slices/userSlice';
 import { useDispatch } from "react-redux" ;
 import { logout } from "./slices/userSlice" ;
 
-import {useHistory} from "react-router-dom" ;
+import {useNavigation} from "react-router-dom" ;
 
 
 function Header (props){
@@ -20,17 +20,13 @@ const logOut = ()=>{
     dispatch(logout()) ;
     console.log("hi from logout");
 }
+const navigate = useNavigate() ;
 routeChange =()=>{
-let path = `/signin` ;
-let history = useHistory() ;
-history.push(path);
-
+navigate("/signin") ;
 }
 
 routeChangeOne = ()=>{
-  let path = `/signup` ;
-  let history = useHistory() ;
-  history.push(path)
+  navigate("/signup")
 }
 
 
