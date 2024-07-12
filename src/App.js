@@ -21,6 +21,7 @@ import PostProperty from './postproperty';
 import { addproperties } from "./slices/propertiesSlice";
  import {useEffect } from "react" ;
 import ProductCard from './propertymodal';
+import { HashRouter } from 'react-router-dom';
 
 function App() {
  
@@ -90,7 +91,7 @@ function App() {
     <>
   
     {/* <Blog/> */}
-     <BrowserRouter>
+     <HashRouter>
       <Routes>
         <Route path = "/propertymodal" element = {<ProductCard />}/>
         <Route path = "/postproperty" element = {<PostProperty/>} />
@@ -102,7 +103,7 @@ function App() {
         <Route path = "/signin" element = {<SignInSide parentCallback = {handleCallback} />} />
         <Route path = "/loggingout" element = {<LoggingOut/>} />
       </Routes>
-  </BrowserRouter>
+  </HashRouter>
   
 
    </>
