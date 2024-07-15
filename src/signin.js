@@ -14,8 +14,8 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useSelector} from 'react-redux';
 import { Link , useNavigate } from 'react-router-dom';
-
-
+import Logo from "./images/Logo 1 (1).png" ;
+import Head from './head';
 function Copyright(props) {
  
   return (
@@ -80,13 +80,17 @@ console.log(props) ;
   };
 
   return (
+    <>
+    <Head/>
     <ThemeProvider theme={defaultTheme}>
+   
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
+     
         <Grid
           item
           xs={false}
-          sm={4}
+          sm={6}
           md={7}
           sx={{
             backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
@@ -97,6 +101,7 @@ console.log(props) ;
             backgroundPosition: 'center',
           }}
         />
+        
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -107,8 +112,9 @@ console.log(props) ;
               alignItems: 'center',
             }}
           >
+         
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
+             <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
               Please Sign in To Post Or Get Property Details
@@ -165,5 +171,6 @@ console.log(props) ;
         </Grid>
       </Grid>
     </ThemeProvider>
+    </>
   );
 }

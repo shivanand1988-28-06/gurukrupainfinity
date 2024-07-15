@@ -126,7 +126,7 @@ padding: 50px ;
 .head{
   display : flex ;
   max-width: fit-content;
-  height : 150px ;
+  height : 120px ;
 
 
 }
@@ -232,4 +232,13 @@ margin-top: 10px;
  border-color: black;
 padding: 50px ;
   }
+}
+
+.signin{
+ 
+  height: 300px;
+  display : flex ;
+  background-image: url("./images/Logo 1 (1).png") ;
+  background-repeat: no-repeat;
+ 
 }

@@ -11,6 +11,7 @@ import { useSelector} from "react-redux";
 import { selectUser } from "./slices/userSlice";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 function Head (){
 
   const newUser = useSelector(selectUser) ;
@@ -64,13 +65,13 @@ const navigateTwo = () =>{
                 </Button>
             </div>
             <div className="dropdown">
-            <Button className = "dropbtn"  ><FormatIndentIncreaseTwoToneIcon/>
+            <Button className = "dropbtn"   onClick = {navigateTwo}><FormatIndentIncreaseTwoToneIcon/>
                    Post Property Now
                 </Button>
             </div>
             
             <div className="dropdown">
-            <Button className = "dropbtn"  onClick = {navigateTwo}><SearchTwoToneIcon/>
+            <Button className = "dropbtn" onClick = {event=>window.location.href = "/"}><SearchTwoToneIcon/>
                   Search-Property Now
                 </Button>
             </div>
