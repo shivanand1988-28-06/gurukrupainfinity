@@ -263,3 +263,19 @@ padding: 50px ;
   margin-left: 20px;
   margin-top:  10px ;
 }
+
+.twituser{
+  margin-left: 50px;
+margin-top: 10px;
+color:white
+}
+
+.twitlogout{
+  margin-left: 50px;
+  margin-top: 10px;
+  color:white ;
+  background-color: antiquewhite;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+

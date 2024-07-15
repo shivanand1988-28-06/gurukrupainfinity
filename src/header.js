@@ -122,7 +122,7 @@ const routeChangeOne = ()=>{
                 <Menu01Icon/>
               </div>
               <div >
-                <h3 className = "twit" >HI {newuser}</h3>
+                <h3 className = "twituser" >HI {newuser}</h3>
                
               </div>
               <div className="twitlogout">
