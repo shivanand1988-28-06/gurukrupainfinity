@@ -59,12 +59,12 @@ const navigateTwo = () =>{
             </div>
             <div className="dropdown">
                 
-                <Button className = "dropbtn" onClick = {event =>window.location.href = "/signup"}><AccountCircleTwoToneIcon/>
+                <Button className = "dropbtn" onClick = {navigateOne}><AccountCircleTwoToneIcon/>
                     join OR sign-in
                 </Button>
             </div>
             <div className="dropdown">
-            <Button className = "dropbtn"  onClick = {navigateOne}><FormatIndentIncreaseTwoToneIcon/>
+            <Button className = "dropbtn"  ><FormatIndentIncreaseTwoToneIcon/>
                    Post Property Now
                 </Button>
             </div>
