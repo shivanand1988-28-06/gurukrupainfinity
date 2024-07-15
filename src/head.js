@@ -26,7 +26,7 @@ function Head (){
     };
 
 const navigateOne = () =>{
-  const path = "/signin" ; 
+  const path = "/signin" ;
    navigate(path) ;
 } 
 
@@ -42,10 +42,10 @@ const navigateTwo = () =>{
 
             </div>
             <div className="dropdown">
-                <Button className = "dropbtn" onClick = {navigateOne}>Home</Button>
+                <Button className = "dropbtn" onClick = {event=>window.location.href = "/"}>Home</Button>
             </div>
             <div className="dropdown">
-                <Button className = "dropbtn" onClick = {navigateTwo}>About Us</Button>
+                <Button className = "dropbtn">About Us</Button>
             </div>
             
             <div className="dropdown">
@@ -64,13 +64,13 @@ const navigateTwo = () =>{
                 </Button>
             </div>
             <div className="dropdown">
-            <Button className = "dropbtn"  onClick = {event=>window.location.href = "/signup"}><FormatIndentIncreaseTwoToneIcon/>
+            <Button className = "dropbtn"  onClick = {navigateOne}><FormatIndentIncreaseTwoToneIcon/>
                    Post Property Now
                 </Button>
             </div>
             
             <div className="dropdown">
-            <Button className = "dropbtn"  onClick = {event=>window.location.href = "/"}><SearchTwoToneIcon/>
+            <Button className = "dropbtn"  onClick = {navigateTwo}><SearchTwoToneIcon/>
                   Search-Property Now
                 </Button>
             </div>
