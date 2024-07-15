@@ -10,12 +10,12 @@ import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
 import { useSelector} from "react-redux";
 import { selectUser } from "./slices/userSlice";
 import { useLocation } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 function Head (){
 
   const newUser = useSelector(selectUser) ;
  
-
+  const navigate = useNavigate()
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -24,6 +24,17 @@ function Head (){
     const handleClose = () => {
       setAnchorEl(null);
     };
+
+const navigateOne = () =>{
+  const path = "/signin" ; 
+   navigate(path) ;
+} 
+
+const navigateTwo = () =>{
+  const path = "/postproperty" ;
+  navigate(path) ;
+}
+
     return(
         <>
         <div className="head">
@@ -31,10 +42,10 @@ function Head (){
 
             </div>
             <div className="dropdown">
-                <Button className = "dropbtn" onClick = {event=>window.location.href = "/"}>Home</Button>
+                <Button className = "dropbtn" onClick = {navigateOne}>Home</Button>
             </div>
             <div className="dropdown">
-                <Button className = "dropbtn">About Us</Button>
+                <Button className = "dropbtn" onClick = {navigateTwo}>About Us</Button>
             </div>
             
             <div className="dropdown">
