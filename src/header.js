@@ -67,7 +67,7 @@ const routeChangeOne = ()=>{
               <MdOutlineWifiCalling3></MdOutlineWifiCalling3> 9594939202
               </div>
               <div className = "info">
-                 <BsMailboxFlag></BsMailboxFlag> info@gurukrupainfinity.com
+                 <BsMailboxFlag></BsMailboxFlag> info@theworthconsultants.com
               </div>
               <div className="fb">
                 <Facebook01Icon/>
@@ -83,15 +83,15 @@ const routeChangeOne = ()=>{
               </div>
 
              
-              <div>
-              <Button onClick ={routeChange} >Signin</Button>
+              <div className = "btnsign">
+              <Button onClick ={routeChange} >Sign in</Button>
                             </div>
-                          <div>
+                          <div className = "spa">
                             <span>OR</span>
                             </div>  
               
-              <div>
-              <Button onClick ={ routeChangeOne} >Signup</Button>
+              <div className="btnsignup">
+              <Button onClick ={ routeChangeOne} >Sign up</Button>
                             </div>
 
              

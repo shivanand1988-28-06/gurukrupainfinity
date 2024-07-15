@@ -242,3 +242,24 @@ padding: 50px ;
   background-repeat: no-repeat;
  
 }
+
+.btnsign{
+  margin-left: 30px;
+  border-radius: 10px;
+  color:white;
+  background-color: antiquewhite;
+
+}
+.btnsignup{
+  margin-left: 30px;
+  border-radius: 10px;
+  color: white;
+  background-color: antiquewhite;
+}
+
+.spa{
+
+  color: white ;
+  margin-left: 20px;
+  margin-top:  10px ;
+}

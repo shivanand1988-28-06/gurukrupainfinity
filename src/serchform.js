@@ -92,7 +92,19 @@ const names = [
 const proNames = [
     'Andheri' ,
     'Bandra' 
-]
+] ;
+
+const rentOptions = [
+  "Less Than 50,000" ,
+  "More Than 50,000" ,
+  "between 70,000 to 1 lac" ,
+  "between 1 lac to 1 lacs 30,000" ,
+  "less than 2 lac" ,
+  "2 lacs" ,
+  "more than 2 lacs"
+] 
+
+
 
 
 
@@ -183,7 +195,7 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
    <form onSubmit = {handleSubmit}>
     <div className = "search">
     <div> <FormControl sx={{ m: 1, width: 300 }} >
-     <InputLabel id="demo-multiple-chip-label">Property Type</InputLabel>
+     <InputLabel id="demo-multiple-chip-label">Property Type..</InputLabel>
         <Select
           name = "catagory" 
           labelId="demo-multiple-chip-label"
@@ -248,8 +260,36 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
       
           
         </FormControl> </div> 
-        <div>
-        <Input aria-label="Demo input" placeholder="Rent in words" onChange = {handleChange} name = "rent"  />;
+        <div><FormControl sx={{ m: 1, width: 300 }} >
+        <InputLabel id="demo-multiple-chip-label-two">RENT..</InputLabel>
+        <Select
+          name = "rent" 
+          labelId="demo-multiple-chip-label"
+          id="demo-multiple-chip"
+          multiple
+          value={data.rent}
+          onChange={handleChange}
+          input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
+          renderValue={(selected) => (
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+              {selected.map((value) => (
+                <Chip key={value} label={value} />
+              ))}
+            </Box>
+          )}
+          MenuProps={MenuProps}
+        >
+          {rentOptions.map((name) => (
+            <MenuItem
+              key={name}
+              value={name}
+              style={getStyles(name, proType, theme)}
+            >
+              {name}
+            </MenuItem>
+          ))}
+        </Select>
+        </FormControl>
         </div>
        
       
