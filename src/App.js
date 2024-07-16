@@ -15,13 +15,14 @@ import { useState } from 'react';
 import store from './store';
 import { useDispatch } from "react-redux";
 import LoggingOut from './logout';
-
+import { addproperties } from './slices/propertiesSlice';
 import { selectProperties } from './slices/propertiesSlice';
 import PostProperty from './postproperty';
-import { addproperties } from "./slices/propertiesSlice";
- import {useEffect } from "react" ;
+import { useEffect } from 'react';
+import Allproperties from './allproperties';
 import ProductCard from './propertymodal';
 import { HashRouter } from 'react-router-dom';
+
 
 function App() {
  
@@ -34,7 +35,7 @@ function App() {
   const [userName , setuserName] = useState({}) ;
   const [userEmail,setUserEmail] = useState({}) ;
 
-  const dispatch = useDispatch();
+
 
   function handleCallback  (data) {
         setuserName(data) ;
@@ -43,7 +44,7 @@ function App() {
 
       const prodata = useSelector(selectProperties) ;
   
-
+      const dispatch = useDispatch();
 
       const requestOptions = {
    
@@ -69,9 +70,10 @@ function App() {
            }
            
        ).then(data=>{
-            console.log(data) ;
-            dispatch(addproperties(data)) ;
-               return data ;
+          
+             console.log(data.data[0].result) ;
+            dispatch(addproperties(data.data[0].result)) ;
+            
       
        })
       
@@ -84,7 +86,7 @@ function App() {
      },[]) ;
    
      
-      
+     
  
  
   return (
@@ -95,7 +97,7 @@ function App() {
       <Routes>
         <Route path = "/propertymodal" element = {<ProductCard />}/>
         <Route path = "/postproperty" element = {<PostProperty/>} />
-        
+        <Route path = "/allproperties" element = {<Allproperties />} />
         <Route path = "/header" element = {<Header newuser = {newuser}/>} />
         <Route path = "/blogs-gurukrupainfinity" element = {<Blog/>}/>
         <Route path = "/" element = {<Home/>} />

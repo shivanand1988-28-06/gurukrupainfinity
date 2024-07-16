@@ -23,13 +23,18 @@ import FormData from "form-data" ;
 import SwipeableTextMobileStepper from "./imageslider" ;
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
+import { selectProperties } from './slices/propertiesSlice';
+import { useDispatch } from 'react-redux';
+import { addproperties } from "./slices/propertiesSlice";
+import {useEffect } from "react" ;
 
 
 export default function DialogSelect() {
 
+  const pro = useSelector(selectProperties)
+  console.log(pro[0])
     const username = useSelector(selectUser) ;
-
+    
     const [message , setMessage] = React.useState("") ;
   const [open, setOpen] = React.useState(false);
   const [proType, setPro] = React.useState('');
@@ -54,8 +59,9 @@ export default function DialogSelect() {
   const [deposit , setDeposit] = React.useState("") ;
   const [image , setImage] = React.useState("") ;
  const[description , setDescription] = React.useState("") ;
-const [isBroker , setBroker] = React.useState(false) ;
-const [isOwner , setOwner] = React.useState(false) ;
+ const [isBroker , setBroker] = React.useState(false) ;
+ const [isOwner , setOwner] = React.useState(false) ;
+ const [rent , setRent] = React.useState("") ;
 
 console.log(isBroker,isOwner);
 
@@ -124,6 +130,10 @@ const handlechangeOwner = (event)=>{
   const  handleChangeideal = (event) => {
     setideal(String(event.target.value));
   } ;
+
+  const handleChangeRent = (event)=>{
+    setRent(Number(event.target.value));
+  }
 
   const handleChangeImage = (e) => { 
     console.log(e.target.files) ;
@@ -199,7 +209,7 @@ const handlechangeOwner = (event)=>{
    formData.append( "idealfor" , ideal) ;
    formData.append("is_broker" , isBroker)   ;
    formData.append("is_owner" , isOwner) ;
-
+   formData.append("rent" , rent)
 
 // if(proType || buildingType || AgeOfPro || floor || totalFloor || superBuildup
 //   || furnishing || city || location || street || landmark || maintainance 
@@ -212,37 +222,7 @@ const handlechangeOwner = (event)=>{
 
 
      
-      const requestOptions = {
-        method: 'POST',
-        headers: {
-            "Accept": "multipart/form-data"
-        },
-        body: formData ,
-      
-      };
-     
-if (message === ""){
-  fetch("http://localhost:3003/properties/saveProperty" ,requestOptions).then(response => {
-    // Check if the request was successful
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    // Parse the JSON response
-    return response.json();
-  })
-  .then(data => {
-    // Handle the data returned from the server
-    console.log('Post request response:',data);
     
-     
-    
-  })
-  .catch(error => {
-    // Handle any errors that occurred during the fetch
-    console.error('There was a problem with the fetch operation:', error);
-   
-  });
-}
     
 
  
@@ -257,7 +237,7 @@ if (message === ""){
     {/* <SwipeableTextMobileStepper/> */}
     <div className = "propertyform">
 
-      <button onClick={handleClickOpen} className = "probutton">Click To Add Property Details</button>
+      <button onClick={handleClickOpen} className = "probutton"><span>Add Property Details</span></button>
 
       <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
       
@@ -337,7 +317,7 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="floor"
+               label="Floor"
                 value={floor}
                 onChange={handleChangefloor}
                 input={<OutlinedInput label="Building Type" />}
@@ -348,7 +328,7 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="super build up in sqrfeet"
+               label="Super Build Up In Sqrfeet"
                 value={superBuildup}
                 onChange={handleChangesuperbuild}
                 input={<OutlinedInput label="Building Type" />}
@@ -360,13 +340,23 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="total floor"
+               label="Total Floor"
                 value={totalFloor}
                 onChange={handleChangetotalfloor}
                 input={<OutlinedInput label="Building Type" />}
               />
             </FormControl>
             
+            <FormControl sx={{ m: 1, minWidth: 320 }}>
+              <InputLabel id="demo-dialog-select-label"></InputLabel>
+              <TextField
+               id="outlined-controlled"
+               label="Rent"
+                value={rent}
+                onChange={handleChangeRent}
+                input={<OutlinedInput label="Building Type" />}
+              />
+            </FormControl>
             
             
 
@@ -390,7 +380,7 @@ if (message === ""){
               </Select>
             </FormControl>
             <FormControl sx={{ m: 1, minWidth: 320 }}>
-              <InputLabel id="demo-dialog-select-label">city</InputLabel>
+              <InputLabel id="demo-dialog-select-label">City</InputLabel>
               <Select
                 labelId="demo-dialog-select-label"
                 id="demo-dialog-select"
@@ -410,7 +400,7 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="location"
+               label="Location"
                 value={location}
                 onChange={handleChangelocation}
                 input={<OutlinedInput label="Building Type" />}
@@ -420,7 +410,7 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="street"
+               label="Street"
                 value={street}
                 onChange={handleChangestreet}
                 input={<OutlinedInput label="Building Type" />}
@@ -430,7 +420,7 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="landmark"
+               label="Landmark"
                 value={landmark}
                 onChange={handleChangelandmark}
                 input={<OutlinedInput label="Building Type" />}
@@ -469,7 +459,7 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="deposit"
+               label="Deposit"
                 value={deposit}
                 onChange={handleChangedeposit}
                 input={<OutlinedInput label="Building Type" />}
@@ -482,7 +472,7 @@ if (message === ""){
                 id="demo-dialog-select"
                 value={rentNego}
                 onChange={handleChangerentNego}
-                input={<OutlinedInput label="Building Type" />}
+                input={<OutlinedInput label="Rent Negotiable" />}
               >
                 <MenuItem value="">
                   <em>None</em>
@@ -516,7 +506,7 @@ if (message === ""){
                 id="demo-dialog-select"
                 value={lockinPeriod}
                 onChange={handleChangelockin}
-                input={<OutlinedInput label="Building Type" />}
+                input={<OutlinedInput label="Lockin Period" />}
               >
                 <MenuItem value="">
                   <em>None</em>
@@ -536,7 +526,7 @@ if (message === ""){
                 id="demo-dialog-select"
                 value={leaveLiscense}
                 onChange={handleChangeleave}
-                input={<OutlinedInput label="Building Type" />}
+                input={<OutlinedInput label="Leave and liscense" />}
               >
                 <MenuItem value="">
                   <em>None</em>
@@ -567,7 +557,7 @@ if (message === ""){
                 id="demo-dialog-select"
                 value={ideal}
                 onChange={handleChangeideal}
-                input={<OutlinedInput label="Building Type" />}
+                input={<OutlinedInput label="Ideal For" />}
               >
                 <MenuItem value="">
                   <em>None</em>
@@ -584,7 +574,7 @@ if (message === ""){
               <InputLabel id="demo-dialog-select-label"></InputLabel>
               <TextField
                id="outlined-controlled"
-               label="description"
+               label="Description"
                 value={description}
                 onChange={handleChangedescription}
                 input={<OutlinedInput label="Building Type" />}

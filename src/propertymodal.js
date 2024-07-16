@@ -13,25 +13,18 @@ import { selectProperties } from './slices/propertiesSlice';
 
 export default function ProductCard() {
 
-const property = useSelector(selectProperties)
-const prodata = property ;
 
-const data = prodata[0].data[0];
-console.log(data)
   return (
     
     <>
  
-    {/* {
-    prodata[0].data[0].result.map(dat=>{
-    console.log(dat) ;
-      })} */}
-    {/* {prodata[0].data[0].result.map(dat=>{
+     
+    
       <Card sx={{ width: 320, maxWidth: '100%', boxShadow: 'lg' }}>
       <CardOverflow>
         <AspectRatio sx={{ minWidth: 200 }}>
           <img
-            src={dat.image}
+            src=""
             srcSet="https://images.unsplash.com/photo-1593121925328-369cc8459c08?auto=format&fit=crop&w=286&dpr=2 2x"
             loading="lazy"
             alt=""
@@ -48,7 +41,7 @@ console.log(data)
           overlay
           endDecorator={<ArrowOutwardIcon />}
         >
-       {dat.location}
+      
         </Link>
 
         <Typography
@@ -60,7 +53,7 @@ console.log(data)
             </Chip>
           }
         >
-          {dat.rent}
+        
         </Typography>
         <Typography level="body-sm">
           (Only <b>7</b> left in stock!)
@@ -72,8 +65,8 @@ console.log(data)
         </Button>
       </CardOverflow>
     </Card>
-console.log(dat)
-    })} */}
+
+    
     </>
   );
 }
