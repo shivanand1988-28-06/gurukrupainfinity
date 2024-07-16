@@ -83,6 +83,18 @@ if (flag === true){
         >
       
         </Link>
+        <Typography level="body-xs">NEAR {dat.landmark}</Typography>
+        <Link
+          href="#product-card"
+          fontWeight="lg"
+          color="danger"
+          textColor="text.primary"
+          overlay
+         
+        >
+      
+        </Link>
+        
 
         <Typography
           level="title-lg"
@@ -95,8 +107,16 @@ if (flag === true){
         >
         
         </Typography>
-        <Typography level="body-lg">
-          ({dat.location})
+        <Typography
+          level="title-lg"
+          sx={{ mt: 1, fontWeight: 'xl' }}
+          endDecorator={
+            <Chip component="span" size="lg" variant="soft" color="success">
+             Rent -- {dat.rent} Rupees/Month
+            </Chip>
+          }
+        >
+        
         </Typography>
       </CardContent>
       <CardOverflow>
