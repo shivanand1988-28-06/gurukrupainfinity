@@ -43,7 +43,7 @@ background-image:url("./images/istockphoto-1214716068-1024x1024 1.png") ;
 }
 
 .log{
-margin-top: 170px;
+margin-top: 140px;
 margin-left:650px ;
 width : 280px ;
 height : 270px ;
@@ -206,7 +206,7 @@ background-repeat: no-repeat;
 
 }
 .probutton{
-
+   
   border-radius: 4px;
   background-color: #21bfae;
   border: none;
@@ -254,6 +254,44 @@ margin-left: 180px;
 
 .allpro>div{
   margin-left: 30px;
+}
+
+.midprobtn{
+  border-radius: 4px;
+  background-color: #21bfae;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-right: 100px;
+}
+
+.midprobtn span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.midprobtn span :after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.midprobtn:hover span {
+  padding-right: 25px;
+}
+
+.midprobtn:hover span:after{
+  opacity: 1;
+  right: 0;
 }
 
 @media only screen and(max-width : 620px){
@@ -325,3 +363,12 @@ color:white
   border-radius: 10px;
 }
 
+.midbtn{
+  
+  margin-top: -350px;
+  float: right;
+  margin-right: 1150px;
+  width : 280px ;
+  height : 270px 
+ 
+}

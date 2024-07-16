@@ -112,7 +112,7 @@ if (flag === true){
           sx={{ mt: 1, fontWeight: 'xl' }}
           endDecorator={
             <Chip component="span" size="lg" variant="soft" color="success">
-             Rent -- {dat.rent} Rupees/Month
+             Rent -- {dat.rent} Rs/Month
             </Chip>
           }
         >

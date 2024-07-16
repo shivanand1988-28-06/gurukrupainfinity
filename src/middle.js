@@ -35,7 +35,9 @@ function Middle (){
     },
   }) ;
 
-
+function postAllpro (){
+   navigate('/allproperties')
+}
  
  if(username === false){
     return(
@@ -48,9 +50,11 @@ function Middle (){
             <div className="bg">
            
             <div className = "log">
-                
+            
             </div>
-           
+           <div className = "midbtn">
+           <button onClick={postAllpro} className = "midprobtn"><span>Get Property Details</span></button>
+           </div>
             <div className="post">
              
           <ThemeProvider theme={theme}>
