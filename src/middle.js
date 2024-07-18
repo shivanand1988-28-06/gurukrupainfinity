@@ -67,14 +67,14 @@ function postAllpro (){
    
               
             </div>
-           <MultipleSelectChipthree/>
+            <MultipleSelectChipthree/> 
             </div>
            
             
           </div>  
-          <div class= "mid-mid">
+          {/* <div class= "mid-mid">
                       <ButtonBaseDemo/>
-                     </div>
+                     </div> */}
           <div class = "bloghead">
                    <Link to = "/blogs-gurukrupainfinity"><h1 class = "heading"> Blogs - Commercial Real Estate Property News & Tips </h1> </Link>
                      </div> 
@@ -87,19 +87,21 @@ function postAllpro (){
                         </Button> 
                      </div>
                     
-                     <Button>
+                     
                      <div >
-                        <RecipeReviewCard/>
-                     </div>
-                     </Button>
                      <Button>
-                     <div>
                         <RecipeReviewCard/>
+                        </Button>
                      </div>
-                     </Button>
+                     
+                    
                     
           </div>
-
+          <div className = "midlast">
+              
+          <h3 className="midheading">MAKING REALTY DREAMS A REALITY</h3>
+          </div>
+          <h3 className="title">COMMERCIAL PROPERTIES FOR RENT</h3>
           
           </>
     )}else{
@@ -116,12 +118,15 @@ function postAllpro (){
             <div className = "log">
                 
             </div>
+            <div className = "midbtn">
+           <button onClick={postAllpro} className = "midprobtn"><span>Get Property Details</span></button>
+           </div>
            
             <div className="post">
              
           <ThemeProvider theme={theme}>
 
-             <Button  onClick = {event =>window.location.href = "/postproperty"} variant="contained"  endIcon={<SendIcon /> }>
+             <Button  onClick = {postNavigate} variant="contained"  endIcon={<SendIcon /> }>
                  Post Property Now
                </Button>
                </ThemeProvider>
@@ -129,31 +134,41 @@ function postAllpro (){
    
               
             </div>
-           <MultipleSelectChipthree/>
+           <MultipleSelectChipthree/> 
             </div>
            
             
           </div>  
-          <div class= "mid-mid">
+          {/* <div className= "mid-mid">
                       <ButtonBaseDemo/>
-                     </div>
-          <div class = "bloghead">
+                     </div> */}
+          <div className = "bloghead">
                    <Link to = "/blogs-gurukrupainfinity"><h1 class = "heading"> Blogs - Commercial Real Estate Property News & Tips </h1> </Link>
                      </div> 
-          <div class = "blogs">
+          <div className = "blogs">
             
                      
                      <div>
+                     <Button>
                         <RecipeReviewCard/>
+                        </Button>
                      </div>
+                     
+                   
                      <div>
+                     <Button>
                         <RecipeReviewCard/>
-                     </div>
-                     <div>
-                        <RecipeReviewCard/>
+                        </Button>
                      </div>
                     
+                     
+                    
           </div>
+          <div className = "midlast">
+               
+              <h3 className="midheading">MAKING REALTY DREAMS A REALITY</h3>
+          </div>
+          <h3 className="title">COMMERCIAL PROPERTIES FOR RENT</h3>
 
  </>
       )

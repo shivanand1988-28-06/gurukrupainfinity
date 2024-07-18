@@ -13,9 +13,9 @@ import UnstyledInputIntroduction from './input';
 import Slider from '@mui/material/Slider';
 import { Input as BaseInput } from '@mui/base/Input';
 import { styled } from '@mui/system';
-
-
-
+import ApartmentOutlinedIcon from '@mui/icons-material/ApartmentOutlined';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 const blue = {
   100: '#DAECFF',
   200: '#b6daff',
@@ -194,8 +194,8 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
   return (
    <form onSubmit = {handleSubmit}>
     <div className = "search">
-    <div> <FormControl sx={{ m: 1, width: 300 }} >
-     <InputLabel id="demo-multiple-chip-label">Property Type..</InputLabel>
+    <div>  <FormControl sx={{ m: 1, width: 300 }} >
+    <InputLabel id="demo-multiple-chip-label"><ApartmentOutlinedIcon/>Property Type..</InputLabel>
         <Select
           name = "catagory" 
           labelId="demo-multiple-chip-label"
@@ -227,8 +227,8 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
         
       
       </FormControl></div>
-      <div><FormControl sx={{ m: 1, width: 300 }} >
-     <InputLabel id="demo-multiple-chip-label-two">Locations...</InputLabel>
+       <div><FormControl sx={{ m: 1, width: 300 }} >
+       <InputLabel id="demo-multiple-chip-label-two"><LocationOnIcon/>Locations...</InputLabel>
         <Select
           name = "locations"
           labelId="demo-multiple-chip-label-two"
@@ -261,7 +261,7 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
           
         </FormControl> </div> 
         <div><FormControl sx={{ m: 1, width: 300 }} >
-        <InputLabel id="demo-multiple-chip-label-two">RENT..</InputLabel>
+         <InputLabel id="demo-multiple-chip-label-two"><CurrencyRupeeIcon/>RENT..</InputLabel>
         <Select
           name = "rent" 
           labelId="demo-multiple-chip-label"
@@ -273,7 +273,7 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
           renderValue={(selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
               {selected.map((value) => (
-                <Chip key={value} label={value} />
+                <Chip key={value} label={value} variant='outlined'/>
               ))}
             </Box>
           )}

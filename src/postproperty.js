@@ -27,7 +27,8 @@ import { selectProperties } from './slices/propertiesSlice';
 import { useDispatch } from 'react-redux';
 import { addproperties } from "./slices/propertiesSlice";
 import {useEffect } from "react" ;
-
+import Allproperties from './allproperties';
+import AllpropertiesData from './allpropertydata';
 
 export default function DialogSelect() {
 
@@ -234,6 +235,7 @@ const handlechangeOwner = (event)=>{
     <>
     
     <Head/>
+   
     {/* <SwipeableTextMobileStepper/> */}
     <div className = "propertyform">
 
@@ -591,6 +593,10 @@ const handlechangeOwner = (event)=>{
           
         </DialogActions>
       </Dialog>
+     
+    </div>
+    <div>
+    
     </div>
     </>
   );

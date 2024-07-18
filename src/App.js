@@ -22,6 +22,7 @@ import { useEffect } from 'react';
 import Allproperties from './allproperties';
 import ProductCard from './propertymodal';
 import { HashRouter } from 'react-router-dom';
+import AllpropertiesData from './allpropertydata';
 
 
 function App() {
@@ -104,6 +105,7 @@ function App() {
         <Route path= "/signup" element = {<SignUp parentCallback = {handleCallback} />}/>
         <Route path = "/signin" element = {<SignInSide parentCallback = {handleCallback} />} />
         <Route path = "/loggingout" element = {<LoggingOut/>} />
+        <Route path = "/allpropertydata" element ={<AllpropertiesData/>}/>
       </Routes>
   </HashRouter>
   

@@ -20,7 +20,7 @@ margin-top:8px;
 }
 
 .fb{
-margin-left: 400px;
+margin-left: 340px;
 margin-top: 10px;
 }
 .twit{
@@ -59,17 +59,20 @@ background-repeat: no-repeat;
 .post{
  margin-top: -350px;
 float: right;
-margin-right: 160px;
+margin-right: 180px;
 width : 280px ;
 height : 270px 
 }
 .mid-mid{
   margin : 60px
 }
+.blogs{
+  margin-left: 90px;
 
+}
 .blogs >div{
   display: inline-block ;
-  margin : 90px ;
+  margin-left : 250px ;
  
  
 }
@@ -117,6 +120,8 @@ padding: 50px ;
  margin-top: 20px;
  background-color:white ;
  border-radius: 20px;
+ border-color: #21bfae;
+ border-width: 2px;
  padding: 50px ;
 
 
@@ -247,13 +252,14 @@ margin-top: 10px;
 }
 .allpro{
 
-  display:flex;
+  display: grid;
+  grid-template-columns: auto auto auto ;
  margin-top: 50px;
-margin-left: 180px;
+margin-left: 200px;
 }
 
 .allpro>div{
-  margin-left: 30px;
+  margin-bottom: 200px;
 }
 
 .midprobtn{
@@ -328,17 +334,20 @@ padding: 50px ;
 }
 
 .btnsign{
-  margin-left: 30px;
+  padding-top: 5px;
+  margin-left: 20px;
   border-radius: 10px;
   color:white;
-  background-color: antiquewhite;
-
+  background-color: white;
+  height : 40px
 }
 .btnsignup{
-  margin-left: 30px;
+  padding-top: 5px;
+  margin-left: 20px;
   border-radius: 10px;
   color: white;
-  background-color: antiquewhite;
+  background-color: white;
+  height : 40px
 }
 
 .spa{
@@ -371,4 +380,70 @@ color:white
   width : 280px ;
   height : 270px 
  
+}
+.midlast{
+  width : auto ;
+  height : 30px ;
+  background-color: grey
+}
+
+
+
+
+.title{
+  padding-top: 20px;
+  margin-left: 205px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color:#21bfae
+}
+.midheading{
+  margin-left: 650px; 
+ color: white ;
+ font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.websitefooter{
+  display : flex ;
+  background-color: black;
+  width : auto ;
+  height : 500px ;
+ 
+  background-repeat: no-repeat;
+}
+
+.footerimg{
+  margin-top: 150px;
+  margin-left: 50px;
+}
+.cont{
+  color : white ;
+  margin-left: 100px;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: larger;
+ margin-top: 20px;
+}
+.footql{
+  margin-left: 100px;
+  color : white ;
+}
+.hmlink{
+ 
+  color: white;
+  text-decoration: none;
+  font-family:sans-serif;
+  font-size: larger;
+  margin: 20px;
+
+  
+}
+.footabt{
+  margin-left: 70px;
+   color : white
+}
+.footabtp{
+  margin-left : 70px ;
+  color : white
+}
+.read{
+  color : goldenrod
 }
