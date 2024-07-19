@@ -42,9 +42,7 @@ const routeChangeOne = ()=>{
               <div className = "mobnumber">
               <MdOutlineWifiCalling3></MdOutlineWifiCalling3> 9594939202
               </div>
-              <div className = "info">
-                 <BsMailboxFlag></BsMailboxFlag> info@theworthconsultants.com
-              </div>
+              
               
 
              
@@ -66,7 +64,7 @@ const routeChangeOne = ()=>{
     )}
     else {
     return(
-      <div className = "header">
+      <div className = "headertwo">
              
               <div className = "mobnumber">
               <MdOutlineWifiCalling3></MdOutlineWifiCalling3> 9594939202
