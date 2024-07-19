@@ -309,7 +309,7 @@ display : grid ;
 width :auto
 }
 .bg{
-   width : auto ;
+   width : 630px ;
    height: fit-content;
 }
   
