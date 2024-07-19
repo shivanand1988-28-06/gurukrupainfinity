@@ -328,15 +328,18 @@ width :430px ;
  margin-top: 10px;
  background-color:white ;
  border-radius: 20px;
- border-color: #21bfae;
- border-width: 2px;
- padding: 50px ;
+
 }
 .headertwo{
   display : flex ;
   width : 630px ;
   height : 50px ;
   background-color: #21bfae;
+}
+.bg{
+ width : 460px ;
+height : 850px ;
+background-image:url("./images/istockphoto-1214716068-1024x1024 1.png") ; 
 }
   
 }
