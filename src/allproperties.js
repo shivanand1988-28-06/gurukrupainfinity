@@ -15,7 +15,7 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Head from "./head" ;
 import {purple,green,lime} from "@mui/material/colors" ;
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import Footer from "./websitefooter";
 
 export default function Allproperties (){
    
@@ -131,6 +131,9 @@ if (flag === true){
         </>
       )
        })}
+      </div>
+      <div>
+        <Footer/>
       </div>
         </>
     )

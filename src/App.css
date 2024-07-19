@@ -300,11 +300,11 @@ margin-left: 200px;
   right: 0;
 }
 
-@media only screen and(max-width : 620px){
+@media only screen and(max-width : 800px){
   .header{
     display: flex;
   height : 50px ;
-  width : 100% ;
+  width : 800px ;
   background-color: #21bfae;
   } ;
   .twitlogout{
@@ -313,7 +313,7 @@ margin-left: 200px;
   } ;
   .searchbar{
     display : flex ;
-  width : 100% ;
+  width : 800px ;
   height : 50px ;
  margin-left: 130px;
  margin-top: 20px;
