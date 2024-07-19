@@ -114,15 +114,15 @@ padding: 50px ;
 
 .search{
   display : flex ;
-  width : 1150px ;
-  height : 90px ;
+  width : 630px ;
+  height : 180px ;
  margin-left: 130px;
  margin-top: 20px;
  background-color:white ;
  border-radius: 20px;
  border-color: #21bfae;
  border-width: 2px;
- padding: 50px ;
+ padding: 10px ;
 
 
 } 
@@ -311,6 +311,18 @@ width :630px ;
 .bg{
    width : 630px ;
    height: fit-content;
+}
+.search{
+  display : grid ;
+  width : 430px ;
+  height : 300px ;
+ margin-left: 40px;
+ margin-top: 70px;
+ background-color:white ;
+ border-radius: 20px;
+ border-color: #21bfae;
+ border-width: 2px;
+ padding: 50px ;
 }
   
 }

@@ -192,6 +192,7 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
   }
 
   return (
+    
    <form onSubmit = {handleSubmit}>
     <div className = "search">
     <div>  <FormControl sx={{ m: 1, width: 300 }} >
@@ -297,5 +298,6 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
       
     </div>
     </form>
+  
   );
 }
