@@ -307,6 +307,10 @@ margin-left: 200px;
 .mid{
 display : grid ;
 }
+.bg{
+   width : auto ;
+   height: fit-content;
+}
   
 }
 
