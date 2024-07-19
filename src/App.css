@@ -303,6 +303,7 @@ margin-left: 200px;
 @media only screen and (max-width : 630px){
   .header{
     display: none;
+    display : grid
 } ;
 .mid{
 display : grid ;
@@ -313,11 +314,12 @@ width :630px ;
    height: fit-content;
 }
 .search{
+  position: fixed;
   display : grid ;
   width : 430px ;
   height : 300px ;
  margin-left: 40px;
- margin-top: 70px;
+ margin-top: 10px;
  background-color:white ;
  border-radius: 20px;
  border-color: #21bfae;
