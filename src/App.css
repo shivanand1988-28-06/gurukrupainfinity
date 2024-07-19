@@ -323,7 +323,7 @@ width :430px ;
  
   display : grid ;
   width : 430px ;
-  height : 300px ;
+  height : 330px ;
  margin-left: 40px;
  margin-top: 10px;
  background-color:white ;
@@ -337,10 +337,19 @@ width :430px ;
   background-color: #21bfae;
 }
 .bg{
- width : 460px ;
+ width : 630px ;
 height : 850px ;
 background-image:url("./images/istockphoto-1214716068-1024x1024 1.png") ; 
 }
+.log{
+margin-top: 140px;
+margin-left:150px ;
+width : 280px ;
+height : 270px ;
+background-image: url("./images/Logo 1 (1).png");
+background-repeat: no-repeat;
+}
+
   
 }
 
