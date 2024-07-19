@@ -306,10 +306,10 @@ margin-left: 200px;
 } ;
 .mid{
 display : grid ;
-width :auto
+width :inherit
 }
 .bg{
-   width : fit-content;
+   width : 630px ;
    height: fit-content;
 }
   
