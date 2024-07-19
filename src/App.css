@@ -299,22 +299,28 @@ margin-left: 200px;
   opacity: 1;
   right: 0;
 }
+.headertwo{
+  display : none ;
+  width : 430px ;
+  height : 50px ;
+  background-color: #21bfae;
+}
 
 @media only screen and (max-width : 630px){
   .header{
-    display: none;
-    display : grid
+   
+    display : none;
+    width : 630px ;
+    
 } ;
+
 .mid{
 display : grid ;
-width :630px ;
+width :430px ;
 }
-.bg{
-   width : 630px ;
-   height: fit-content;
-}
+
 .search{
-  position: fixed;
+ 
   display : grid ;
   width : 430px ;
   height : 300px ;
@@ -325,6 +331,12 @@ width :630px ;
  border-color: #21bfae;
  border-width: 2px;
  padding: 50px ;
+}
+.headertwo{
+  display : flex ;
+  width : 430px ;
+  height : 50px ;
+  background-color: #21bfae;
 }
   
 }
