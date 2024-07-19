@@ -29,7 +29,7 @@ margin-top: 10px;
 }
 .mid{
 text-align: center;
-display: flex
+display: grid ;
 }
 
 
@@ -300,28 +300,14 @@ margin-left: 200px;
   right: 0;
 }
 
-@media only screen and(max-width : 480px){
+@media only screen and (max-width : 630px){
   .header{
-    display: flex;
-  height : 50px ;
-  width : 800px ;
-  background-color: #21bfae;
-  } ;
-  .twitlogout{
-    margin-left: 50px;
-      margin-top: 10px;
-  } ;
-  .searchbar{
-    display : flex ;
-  width : 800px ;
-  height : 50px ;
- margin-left: 130px;
- margin-top: 20px;
- background-color: white;
- border-radius: 20px;
- border-color: black;
-padding: 50px ;
-  }
+    display: none;
+} ;
+.mid{
+display : grid ;
+}
+  
 }
 
 .signin{
