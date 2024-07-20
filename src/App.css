@@ -78,7 +78,7 @@ height : 270px
 }
 .bloghead{
    border-top-right-radius: 20px;
-  border-bottom-right-radius: 20;
+  border-bottom-right-radius: 20px;
    width : 1250px ;
    height : 100px
   
@@ -310,21 +310,21 @@ margin-left: 200px;
   .header{
    
     display : none;
-    width : 630px ;
+    width : 430px ;
     
 } ;
 
 .mid{
 display : grid ;
-width :630px ;
+width :430px ;
 }
 
 .search{
  
   display : grid ;
-  width : 630px ;
+  width : 430px ;
   height : 330px ;
- margin-left: 40px;
+ margin-left: 00px;
  margin-top: 10px;
  background-color:white ;
  border-radius: 20px;
@@ -332,29 +332,37 @@ width :630px ;
 }
 .headertwo{
   display : flex ;
-  width : 630px ;
+  width : 430px ;
   height : 50px ;
   background-color: #21bfae;
 }
 .bg{
   display : grid ;
- width : 630px ;
+ width :430px ;
 height : 850px ;
-background-image:url("./images/istockphoto-1214716068-1024x1024 1.png") ; 
+background-image:url("./images/istockphoto-1214716068-1024x1024 630.png") ; 
+background-repeat: no-repeat;
 }
 .log{
 margin-top: 140px;
-margin-left:150px ;
+margin-left:50px ;
 width : 280px ;
 height : 270px ;
 background-image: url("./images/Logo 1 (1).png");
 background-repeat: no-repeat;
-}
+}                           
 .midbtn{
-  margin-top: 150px;
-  margin-left:150px  ;
+
+  margin-left:50px  ;
    width : 280px ;
-  height : 170px 
+  height : 70px 
+}
+.bloghead{
+  width :430px ;
+
+}
+.heading{
+ margin-left: 10px;
 }
   
 }
