@@ -314,6 +314,7 @@ margin-left: 200px;
     
 } ;
 
+
 .mid{
 display : grid ;
 width :630px ;
@@ -336,16 +337,19 @@ width :630px ;
   height : 50px ;
   background-color: #21bfae;
 }
+.mobnumber{
+  margin-left: 30px;
+}
 .bg{
   display : grid ;
- width : 630px ;
+ width : 430px ;
 height : 850px ;
 background-image:url("./images/istockphoto-1214716068-1024x1024 630.png") ; 
 background-repeat: no-repeat ;
 }
 .log{
 margin-top: 140px;
-margin-left:150px ;
+margin-left:50px ;
 width : 280px ;
 height : 270px ;
 background-image: url("./images/Logo 1 (1).png");
