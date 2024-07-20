@@ -324,7 +324,7 @@ width :630px ;
   display : grid ;
   width : 430px ;
   height : 330px ;
- margin-left: 40px;
+ margin-left: 00px;
  margin-top: 10px;
  background-color:white ;
  border-radius: 20px;
@@ -358,7 +358,11 @@ background-repeat: no-repeat;
   height : 70px 
 }
 .bloghead{
-  width :630px ;
+  width :430px ;
+  margin-left: 10px;
+}
+.heading{
+  margin-left: 00px;
 }
   
 }

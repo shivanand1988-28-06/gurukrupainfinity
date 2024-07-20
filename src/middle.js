@@ -143,7 +143,7 @@ function postAllpro (){
                       <ButtonBaseDemo/>
                      </div> */}
           <div className = "bloghead">
-                   <Link to = "/blogs-gurukrupainfinity"><h1 class = "heading"> Blogs - Commercial Real Estate Property News & Tips </h1> </Link>
+                   <Link to = "/blogs-gurukrupainfinity"><h1 className = "heading"> Blogs - Commercial Real Estate Property News & Tips </h1> </Link>
                      </div> 
           <div className = "blogs">
             
