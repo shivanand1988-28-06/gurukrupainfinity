@@ -308,8 +308,7 @@ margin-left: 200px;
 
 @media only screen and (max-width : 630px){
   .header{
-   
-    display : none;
+   display : none;
     width : 630px ;
     
 } ;
@@ -331,6 +330,7 @@ width :630px ;
  border-radius: 20px;
 
 }
+
 .headertwo{
   display : flex ;
   width : 630px ;
@@ -343,26 +343,34 @@ width :630px ;
 .bg{
   display : grid ;
  width : 430px ;
-height : 850px ;
+height : 750px ;
 background-image:url("./images/istockphoto-1214716068-1024x1024 630.png") ; 
 background-repeat: no-repeat ;
 }
+
 .log{
-margin-top: 140px;
-margin-left:50px ;
-width : 280px ;
-height : 270px ;
-background-image: url("./images/Logo 1 (1).png");
+margin-top: 220px;
+margin-left:110px ;
+width : 180px ;
+height : 150px ;
+background-image: url("./images/Logo 200.1.jpg");
 background-repeat: no-repeat;
-}                           
+}
+
+.post{
+  margin-top: -260px;
+  height : 0px ;
+  margin-left: 40px;
+}
+                           
 .midbtn{
 
-  margin-left:60px  ;
-
+  margin-left:80px  ;
+  
  
 }
 .midprobtn{
-  margin-left: 00px ;
+
   margin-top: -50px;
 
   width : 200px ;
