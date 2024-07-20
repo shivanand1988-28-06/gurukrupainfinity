@@ -195,7 +195,7 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
     
    <form onSubmit = {handleSubmit}>
     <div className = "search">
-    <div>  <FormControl sx={{ m: 1, width: 200 }} >
+    <div>  <FormControl sx={{ m: 0.5, width: 200 }} >
     <InputLabel id="demo-multiple-chip-label"><ApartmentOutlinedIcon/>Property Type..</InputLabel>
         <Select
           name = "catagory" 
@@ -228,7 +228,7 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
         
       
       </FormControl></div>
-       <div><FormControl sx={{ m: 1, width: 200 }} >
+       <div><FormControl sx={{ m: 0.5, width: 200 }} >
        <InputLabel id="demo-multiple-chip-label-two"><LocationOnIcon/>Locations...</InputLabel>
         <Select
           name = "locations"
@@ -261,7 +261,7 @@ const [data , setData] = React.useState({catagory : [] , locations : [] , rent :
       
           
         </FormControl> </div> 
-        <div><FormControl sx={{ m: 1, width: 200 }} >
+        <div><FormControl sx={{ m: 0.5, width: 200 }} >
          <InputLabel id="demo-multiple-chip-label-two"><CurrencyRupeeIcon/>RENT..</InputLabel>
         <Select
           name = "rent" 
