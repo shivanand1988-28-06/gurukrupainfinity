@@ -357,9 +357,18 @@ background-repeat: no-repeat;
 }                           
 .midbtn{
 
-  margin-left:50px  ;
-   width : 280px ;
-  height : 70px 
+  margin-left:60px  ;
+
+ 
+}
+.midprobtn{
+  margin-left: 00px ;
+  margin-top: -50px;
+
+  width : 200px ;
+  height : 50px ;
+  font-size: large;
+  padding : 10px
 }
 .bloghead{
   width :430px ;
