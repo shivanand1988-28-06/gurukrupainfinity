@@ -104,7 +104,7 @@ const routeChangeOne = ()=>{
       <div className = "header">
              
               <div className = "mobnumber">
-              <MdOutlineWifiCalling3></MdOutlineWifiCalling3> 9594939202
+              <MdOutlineWifiCalling3></MdOutlineWifiCalling3> 9594929302
               </div>
               <div className = "info">
                  <BsMailboxFlag></BsMailboxFlag> info@gurukrupainfinity.com
