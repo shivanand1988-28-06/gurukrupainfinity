@@ -8,8 +8,9 @@ import {useSelector} from "react-redux" ;
 import { selectUser } from './slices/userSlice';
 import { useDispatch } from "react-redux" ;
 import { logout } from "./slices/userSlice" ;
-
+import { useEffect,useState } from "react";
 import {useNavigate} from "react-router-dom" ;
+import { Modal, Box } from "@mui/material";
 
 
 function Header (props){
@@ -29,23 +30,44 @@ navigate("/signin") ;
 
 const routeChangeOne = ()=>{
   navigate("/signup")
+
 }
 
+const style = {
+  fontFamily: "Montserrat",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 300,
+  height: 200,
+  border: "10px solid hotpink",
+  boxShadow: 24,
+  padding: 5,
+  textAlign: "center",
+  background: " #21bfae" ,
+  color : "white"
+};
 
+const [displayPopUp, setDisplayPopUp] = useState(true);
 
-window.addEventListener("load", function(){
-  setTimeout(
-      function open(event){
-          document.querySelector(".popup").style.display = "block";
-      },
-      1000
-  )
-});
+  // when pop-up is closed this function triggers, we pass it to 'onClose' property of the modal
+  const closePopUp = () => {
+    // setting key "seenPopUp" with value true into localStorage
+    localStorage.setItem("seenPopUp", true);
+    // setting state to false to not display pop-up
+    setDisplayPopUp(false);
+  };
 
+  useEffect(() => {
+    // getting value of "seenPopUp" key from localStorage
+    let returningUser = localStorage.getItem("seenPopUp");
+    // if it's not there, for a new user, it will be null
+    // if it's there it will be boolean true
+    // setting the opposite to state, false for returning user, true for a new user
+    setDisplayPopUp(!returningUser);
+  }, []);
 
-document.querySelector("#close").addEventListener("click", function(){
-  document.querySelector(".popup").style.display = "none";
-});
 
     const Menu01Icon = (props: React.SVGProps<SVGSVGElement>) => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={36} height={36} color={"#ffffff"} fill={"none"} {...props}>
@@ -76,7 +98,25 @@ document.querySelector("#close").addEventListener("click", function(){
       if(newuser == false){
     return(
       <>
-      <div></div>
+      <div>
+        {/* conditional rendering, if displayPopUp is truthy we will show the modal */}
+        {displayPopUp && (
+          <Modal
+            open={true}
+// once pop-up will close "closePopUp" function will be executed
+            onClose={closePopUp}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+{/* what user will see in the modal is defined below */}
+              <h1>Very important message</h1>
+              <h3>Just press OK button to never see it again</h3>
+              <button onClick={closePopUp}>OK</button>
+            </Box>
+          </Modal>
+        )}
+      </div>
         <div className = "header">
              
               <div className = "mobnumber">
