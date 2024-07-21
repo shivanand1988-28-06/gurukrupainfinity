@@ -33,6 +33,20 @@ const routeChangeOne = ()=>{
 
 
 
+window.addEventListener("load", function(){
+  setTimeout(
+      function open(event){
+          document.querySelector(".popup").style.display = "block";
+      },
+      1000
+  )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+  document.querySelector(".popup").style.display = "none";
+});
+
     const Menu01Icon = (props: React.SVGProps<SVGSVGElement>) => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={36} height={36} color={"#ffffff"} fill={"none"} {...props}>
           <path d="M4 5L20 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -61,6 +75,8 @@ const routeChangeOne = ()=>{
 
       if(newuser == false){
     return(
+      <>
+      <div></div>
         <div className = "header">
              
               <div className = "mobnumber">
@@ -98,9 +114,11 @@ const routeChangeOne = ()=>{
 
 
         </div>
+        </>
     )}
     else {
     return(
+      <>
       <div className = "header">
              
               <div className = "mobnumber">
@@ -129,6 +147,7 @@ const routeChangeOne = ()=>{
               <Button onClick={logOut}>Log out</Button>
               </div>
               </div>
+              </>
     )}
 }
 
