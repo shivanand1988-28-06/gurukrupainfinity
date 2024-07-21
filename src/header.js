@@ -65,7 +65,8 @@ const [displayPopUp, setDisplayPopUp] = useState(true);
     // if it's not there, for a new user, it will be null
     // if it's there it will be boolean true
     // setting the opposite to state, false for returning user, true for a new user
-    setDisplayPopUp(!returningUser);
+     setDisplayPopUp(!returningUser);
+     console.log(displayPopUp)
   }, []);
 
 
@@ -110,7 +111,7 @@ const [displayPopUp, setDisplayPopUp] = useState(true);
           >
             <Box sx={style}>
 {/* what user will see in the modal is defined below */}
-              <h1>Very important message</h1>
+              <h1>This Site is Still Under Construction</h1>
               <h3>Just press OK button to never see it again</h3>
               <button onClick={closePopUp}>OK</button>
             </Box>
