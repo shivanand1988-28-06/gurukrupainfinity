@@ -40,6 +40,8 @@ function postAllpro (){
 }
  
  if(username === false){
+
+
     return(
       
        <>
@@ -78,25 +80,7 @@ function postAllpro (){
           <div class = "bloghead">
                    <Link to = "/blogs-gurukrupainfinity"><h1 class = "heading"> Blogs - Commercial Real Estate Property News & Tips </h1> </Link>
                      </div> 
-          <div class = "blogs">
-            
-                     
-                  <div  >
-                  <Button >
-                        <RecipeReviewCard />
-                        </Button> 
-                     </div>
-                    
-                     
-                     <div >
-                     <Button>
-                        <RecipeReviewCard/>
-                        </Button>
-                     </div>
-                     
-                    
-                    
-          </div>
+          
           <div className = "midlast">
               
           <h3 className="midheading">MAKING REALTY DREAMS A REALITY</h3>
@@ -139,31 +123,11 @@ function postAllpro (){
            
             
           </div>  
-          {/* <div className= "mid-mid">
-                      <ButtonBaseDemo/>
-                     </div> */}
+          
           <div className = "bloghead">
                    <Link to = "/blogs-gurukrupainfinity"><h1 className = "heading"> Blogs - Commercial Real Estate Property News & Tips </h1> </Link>
                      </div> 
-          <div className = "blogs">
-            
-                     
-                     <div>
-                     <Button>
-                        <RecipeReviewCard/>
-                        </Button>
-                     </div>
-                     
-                   
-                     <div>
-                     <Button>
-                        <RecipeReviewCard/>
-                        </Button>
-                     </div>
-                    
-                     
-                    
-          </div>
+         
           <div className = "midlast">
                
               <h3 className="midheading">MAKING REALTY DREAMS A REALITY</h3>
