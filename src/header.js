@@ -112,7 +112,7 @@ const [displayPopUp, setDisplayPopUp] = useState(true);
             <Box sx={style}>
 {/* what user will see in the modal is defined below */}
               <h1>This Site is Still Under Construction</h1>
-              <h3>Just press OK button to never see it again</h3>
+              <h3>Just press OK button to never see this message  again</h3>
               <button onClick={closePopUp}>OK</button>
             </Box>
           </Modal>
